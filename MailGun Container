@@ -24,10 +24,11 @@ metadata {
 }
 
 preferences {
-	input("accountSID", "text", title: "Twilio Account SID:", description: "Twilio Account SID")
-  	input("authToken", "text", title: "Twilio Auth Token:", description: "Twilio Auth Token")
-    if (getValidated()) {
-		input("fromNumber", "enum", title: "Twilio Phone Number:", description: "Twilio phone number to use.", options: getValidated("phoneList"), required: true)
+	input("mailgun API Key", "text", title: "MailGun Api Key:", description: "MailGun Api Key")
+	input("mailgun domain name", "text", title: "mailgun domain name:", description: "MailGun Domain Name")
+	input("To email address:", "text", title:"Email address to send message to:", description: "Email Address To")
+	input("From email address:", "text", title:"Email address to send message from:", description:"Email Address From")
+	input("email subject:", "text", title:"Email Subject:", description: "Subject Line")
     }
 	input("isDebugEnabled", "bool", title: "Enable debug logging?", defaultValue: false, required: false)
 }
