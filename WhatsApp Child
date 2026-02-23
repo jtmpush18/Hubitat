@@ -27,9 +27,10 @@ metadata {
 }
 
 preferences {
-	input("toNumber", "text", title: "Phone Number:", description: "Phone number to send WhatsApp to.", required: true)
-    input("enableHTMLMessage", "bool", title: "Enable HTML Message Events?", defaultValue: false, required: false)
-    input("enableNofications", "bool", title: "Enable Notifications?", defaultValue: true, required: false)
+    input("apiKey", "text", title: "callmebot API Key:", description: "", required: true)
+    input("toPhone", "text", title: "Recipient Phone Number(es):", description: "Separate multiple numbers with a space", required: true)
+    input("Message", "text", title: "Message:", description: "", required: true)
+    input("debug", "bool", title: "Enable Debug Logging", required: true, defaultValue: false)
 }
 
 def installed() {
